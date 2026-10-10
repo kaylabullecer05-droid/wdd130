@@ -1,43 +1,201 @@
+:root {
+    --primary-color: #003366;
+    --secondary-color: #0099cc;
+    --accent1-color: #ffcc00;
+    --accent2-color: #f0f0f0;
+    --heading-font: 'Merriweather', serif;
+    --body-font: 'Roboto', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--body-font);
+    color: #333;
+}
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+header {
+    background-color: var(--primary-color);
+    color: white;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    padding: 10px;
+}
+header img {
+    width: 100px;
+    height: auto;
+}
 nav {
-  background-color: darkblue;
-  padding: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 nav a {
-  color: white;
-  display: block;
-  padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
 }
-h1 {
-  color: darkblue;
+nav a:hover {
+    color: var(--accent1-color);
 }
-main {
-  max-width: 840px;
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
-main img {
-  width: 150px;
-  height: auto;
-  border: 1px solid black;
-  padding: 2px;
-  box-shadow: 0 0 30px gray;
+main h1 {
+    text-align: center;
+    padding: 20px 0;
 }
-p {
-  padding: 0;
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 20px;
 }
-aside {
-  width: 20rem;
-  margin: 1rem;
-  border: 1px solid rgb(0 0 0 / 0.2);
-  padding: 1rem;
-  background-color: #eee;
-  color: #333;
-  text-align: center;
+.contact-info {
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    line-height: 1.8;
 }
-aside img {
-  width: 200px;
-  height: auto;
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.employees {
+    padding: 20px;
+    margin-top: 2rem;
+}
+.employees h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.employee-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.employee-gallery figure {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    text-align: center;
+    margin: 0;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.employee-gallery img {
+    width: 100%;
+    height: auto;
+}
+.employee-gallery figcaption {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+.form-section {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    background-color: #eee;
+}
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.form-section form {
+    display: grid;
+    gap: 1rem;
+}
+.form-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 0.5rem;
+}
+.form-item.column-full {
+    grid-template-columns: 1fr;
+}
+.form-item label {
+    text-align: right;
+    padding-right: 1rem;
+    font-weight: bold;
+}
+.form-item.column-full label {
+    text-align: left;
+}
+.form-item input, .form-item textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+fieldset {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+fieldset legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+.radio-group {
+    display: grid;
+    gap: 0.5rem;
+}
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+.form-section button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.85rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.form-section button[type="submit"]:hover {
+    background-color: var(--secondary-color);
 }
 footer {
-  margin-top: 15px;
-  border-top: 1px solid #000;
-  text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+}
+.socialmedia a {
+    margin-left: 10px;
+}
+.socialmedia img {
+    width: 30px;
 }
